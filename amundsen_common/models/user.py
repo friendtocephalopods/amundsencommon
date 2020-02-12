@@ -6,7 +6,8 @@ from marshmallow_annotations.ext.attrs import AttrsSchema
 
 @attr.s(auto_attribs=True, kw_only=True)
 class User:
-    email: str
+    user_id: str
+    email: str: Optional[str] = None
     first_name: Optional[str] = None
     last_name: Optional[str] = None
     full_name: Optional[str] = None
